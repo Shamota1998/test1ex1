@@ -12,7 +12,7 @@ template:
       app: spring-boot
 spec:
   containers:
-    - name: spring-boot
+    -name: spring-boot
     image: shamota1998/lab3:v1
     imagePullPolice: Always
 resources:
