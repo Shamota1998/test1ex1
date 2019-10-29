@@ -1,26 +1,25 @@
-apiVersion: v1
-kind: Pod
-metadata: 
-  name: demo
-  labels:
-    app: spring-boot
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+name: demo
+labels:
+app: server5
 spec:
-  selector:
-    matchLabels:
-      app: spring-boot
-  template:
-    metadata:
-      labels:
-        app: spring-boot
-  spec:
-    containers:
-      -name: spring-boot
-      image: shamota1998/lab3:v1
-      imagePullPolice: Always
-      resources:
-        limits:
-          cpu: 500m
-          memory: 1Gi
-        requests:
-          cpu: 500m
-          memory: 1Gi
+selector:
+matchLabels:
+app: server5
+template:
+metadata:
+labels:
+app: server5
+spec:
+containers:
+- name: server5
+image: shamota1998/lab3:v1
+imagePullPolicy: Always
+resources:
+limits:
+cpu: 500m
+memory: 1Gi
+requests:
+cpu: 500m
