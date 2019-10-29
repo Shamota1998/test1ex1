@@ -1,7 +1,7 @@
 metadata: 
   name: demo
   labels:
-	app: spring-boot
+    app: spring-boot
 spec:
 selector:
 matchLabel:
